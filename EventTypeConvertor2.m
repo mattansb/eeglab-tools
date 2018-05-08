@@ -51,6 +51,7 @@
 %{
 Change log:
 -----------
+08-05-2018  Added eeg_checkset at end
 05-05-2018  Added help
 %}
 function [ EEG ] = EventTypeConvertor2(EEG, EventTypes)
@@ -120,6 +121,7 @@ for evnt = eventMatch
     end
 end
 
+EEG = eeg_checkset(EEG);
 %% Results
 T1 = cell2table(EventTypes(:,3:4),'VariableNames',{'Type','Count'});
 T2 = ['TOTAL: ' num2str(sum(T1{:,2})) ' of ' num2str(size(EEG.event,2))];
