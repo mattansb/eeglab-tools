@@ -1,6 +1,6 @@
 # eeglab-tools
 
-_Useful functions for EEGLAB workflow_
+## Useful functions for `EEGLAB` workflow
 
 This is a collection of assorted MATLAB functions to be used along-side EEGLAB.
 
@@ -14,3 +14,9 @@ This is a collection of assorted MATLAB functions to be used along-side EEGLAB.
 pop_eegplot(EEG, 1, 1, 1); spec_eegplot(40, 10);
 ```
 
+## Bug fixes for `EEGLAB` plugins
+
+| Package | Change |
+| ---- | ---- |
+| [`MFFimport`](https://github.com/mattansb/MFFimport-FIX) | `pop_readegimff` now supports gui loading of `.mff`s on windows |
+| [`Cleanline`](https://github.com/mattansb/Cleanline-FIX) | Fixed conflict between an internal function and a matlab function `strjoin` |
